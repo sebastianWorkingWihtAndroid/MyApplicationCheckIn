@@ -1,5 +1,6 @@
 package com.kratoscerete.myapplicationcheckin
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -40,6 +41,11 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "Usuario registrado: $nombre", Toast.LENGTH_SHORT).show()
 
 
+        }
+
+        mBinding.btnGoLogin.setOnClickListener{
+            val goLogin = Intent(this,LoginActivity::class.java)
+            startActivity(goLogin)
         }
     }
 }
